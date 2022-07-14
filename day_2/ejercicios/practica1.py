@@ -3,7 +3,7 @@ def contrasenaValida(contrasena):
 
 
 if __name__ == '__main__':
-    print(contrasenaValida("2Fj(jjbFsuj"))  # true
+    print(contrasenaValida("2aj(jjbFsuj"))  # true
     print(contrasenaValida("eoZiugBf&g9")) # true
     print(contrasenaValida("hola")) # false
     print(contrasenaValida(""))

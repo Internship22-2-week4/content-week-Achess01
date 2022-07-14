@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author</title>
+</head>
+<body>
+  <h1>Author</h1>
+  {% if author %}
+    <h3>{{author.first_name}}</h3>
+    <p>{{author.last_name}}</p>
+    <p>{{author.image}}</p>
+    <p>{{author.status}}</p>
+  {% else %}
+    <p>Not author found</p>
+  {% endif %}
+</body>
+</html>

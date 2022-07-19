@@ -1,7 +1,7 @@
-from email.mime import image
-from pyexpat import model
+from statistics import mode
 from django.db import models
 
+# from user.models import User
 # Create your models here.
 
 
@@ -24,7 +24,7 @@ class Category(models.Model):
     status = models.BooleanField(default=True)
 
     def __str__(self):
-        return f'{self.name} {self.description}'
+        return f'{self.name} - {self.description}'
 
 
 class Book(models.Model):
@@ -34,7 +34,7 @@ class Book(models.Model):
     status = models.BooleanField(default=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return f'{self.title} {self.image} {self.author} {self.category}'
 
